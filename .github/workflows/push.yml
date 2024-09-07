@@ -54,7 +54,7 @@ jobs:
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: echo -n ${{ secrets.CREDS }} | base64
+          credentials: ${{ secrets.CREDS }}
           filename: "resumes/*.pdf"
           folderId: ${{ secrets.FOLDER_ID }}
           overwrite: "true"
