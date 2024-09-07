@@ -1,3 +1,5 @@
+# Secrets : CREDS, FOLDER_ID
+# Requires: GCP Service Account to have write access to the folder
 name: Main
 on: [push]
 
@@ -52,7 +54,7 @@ jobs:
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: ${{ secrets.CREDS }}
+          credentials: echo ${{ secrets.CREDS }} | base64
           filename: "resumes/*.pdf"
           folderId: ${{ secrets.FOLDER_ID }}
           overwrite: "true"
