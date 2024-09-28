@@ -1,211 +1,110 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+\begin{header}
+    \fontsize{25 pt}{25 pt}\selectfont Mohammed Nasser
 
-\documentclass[letterpaper,11pt]{article}
+    \normalsize
+    \kern 5.0 pt%
+    \mbox{\hrefWithoutArrow{mailto:mohammednh284@gmail.com}{mohammednh284@gmail.com}}%
+    \kern 5.0 pt%
+    \AND%
+    \kern 5.0 pt%
+    \mbox{\hrefWithoutArrow{https://elweday.vercel.app/}{https://elweday.vercel.app}}%
+    \kern 5.0 pt%
+    \AND%
+    \kern 5.0 pt%
+    \mbox{\hrefWithoutArrow{https://linkedin.com/in/elweday}{linkedin.com/in/elweday}}%
+    \kern 5.0 pt%
+    \AND%
+    \kern 5.0 pt%
+    \mbox{\hrefWithoutArrow{https://github.com/elweday1}{github.com/elweday1}}%
+\end{header}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage[normalem]{ulem}
-
-\input{glyphtounicode}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\usepackage{ifthen}
-
-% Define a boolean variable
-\newboolean{isRedacted}
-\setboolean{isRedacted}{false}
-
-% Define the redacted command
-\newcommand{\redact}[1]{%
-    \ifthenelse{\boolean{isRedacted}}{\sout{REDACTED}}{#1}%
-}
-
-
-% Test the redacted command
-
-% You can change the value of the boolean variable to see the different outputs
-%\setboolean{isRedacted}{true}
-%\redacted{This is the actual value.}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{document}
-\begin{center}
-  \textbf{\Huge \scshape \redact{Mohammed Nasser}} \\ \vspace{1pt}
-  \small
-  \href{mailto:mohammednh2864@gmail.com}{\underline{\redact{mohammednh2864}@gmail.com}} $|$
-  \href{https://linkedin.com/in/elweday}{\underline{linkedin.com/in/\redact{elweday}}} $|$
-  \href{https://github.com/elweday1}{\underline{github.com/\redact{elweday}}} $|$
-  \href{https://elweday.vercel.app}{\redact{\underline{elweday.vercel.app}}} $|$
-\end{center}
-
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-\resumeSubheading
-{\redact{Studyo}}{London, UK }{Software Developer \small (Remote)}{Nov 2023 -- Aug 2024}
-\resumeItemListStart
-\resumeItem{Orchestrated the development of backend video processing containerized microservices on Google Cloud Platform using Go and Python to serve as a backend for a mobile applications and internal services.}
-\resumeItem{Integrated CI/CD pipelines with GitHub Actions and Docker, cutting deployment times by 50\% and significantly reducing integration errors.}
-\resumeItem{Developed and documented CLI tools and modular solutions to automate repetitive development tasks, saving the team 10 hours per week on average.}
-\resumeItem{Created +30 complex animations with LaTeX, ffmpeg, and OpenGL, visualizing abstract concepts for the company's e-learning platform.}
-\resumeItem{Fine-tuned the custom LLMs for the company's e-learning platform, and interfaced with the OpenAI, GCP APIs to improve the preformance of the models.}
-\resumeItemListEnd
-
-\resumeSubheading
-{\redact{Siemens}}{Cairo, EG }{Software Engineering Intern}{Aug 2024 -- Present}
-\resumeItemListStart
-\resumeItem{Worked with a team of developer reimplementing `Questa Developer` user interface from C++ and Qt to TypeScript and web technologies.}
-\resumeItem{Maintained a vscode/theia extension for Questa Developer and used gRPC to communicate with the IDE.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-
-%-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading{\redact{Helwan} University}{\redact{Cairo, EG}}{Bachelor of Computer and Communication Engineering }{Oct 2021 -- Aug 2026} \\
-\vspace{0.25cm}\small{\textbf{Relevant Coursework}{: Operating Systems, Object Oriented Programming, Data Structures and Algorithms, Databases, Computer Architecture, Microprocessors Microcontrollers, .}} \\
-\resumeSubHeadingListEnd
 
 
-%-----------SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-        \textbf{Languages}{: JavaScript, TypeScript, Python, Go, C, C++, Java} \\
-        \textbf{Web}{:  HTML, CSS, React, Node.js, Express, Next.js, Django, Flask, Svelte.} \\
-        \textbf{Cloud \& DevOps}{: Docker, CI/CD, GCP(iAM, Vertex, Run, Functions, Compute, Storage, Firestore).} \\
-        \textbf{Data \& APIs}{: SQL, MongoDB, NoSQL, ORMs, Database, REST, gRPC, GraphQL, Websockets.} \\
-        \textbf{Other}{: Git, Github, Linux, Docker, CI/CD, Design Patterns, Web Scraping, Testing, Scripting, Microservices} \\
-        }}
-\end{itemize}
 
 
-%-----------PROJECTS-----------
+\begin{twocolentry}{
+        Oct 2021 – Aug 2026
+    }
+    \textbf{Helwan University}, BS in Computer Engineering\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Coursework:} Operating Systems, Object Oriented Programming, Data Structures and Algorithms, Databases, Computer Architecture, Microprocessors Microcontrollers
+    \end{highlights}
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{
+        Aug 2024 – Sep 2024
+    }
+    \textbf{Software Engineer Intern}, Siemens -- Cairo, EG\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Contributed to the development of a next-generation IDE for hardware description languages by implementing a React-based web view, migrating from a legacy QT client while abstracting core logic into reusable services
+
+        \item Engineered a robust treeview component for parsing, selecting, and managing design templates from the file system, streamlining the development process for hardware designers
+        \item Developed gRPC services and clients to seamlessly integrate C++ backend with TypeScript frontend, enabling real-time communication and facilitating the separation of UI from core functionality in a complex software tool
+
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.4 cm}
+
+\begin{twocolentry}{
+        Nov 2023 – Aug 2024
+    }
+    \textbf{Software Engineer}, Studyo -- London, UK (Remote)\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Orchestrated the development of backend video processing containerized microservices on Google Cloud Platform using Go and Python to serve as a backend for a mobile applications and internal services.
+        \item Integrated CI/CD pipelines with GitHub Actions and Docker, cutting deployment times by 50\% and significantly reducing integration errors.
+        \item Developed and documented CLI tools and modular solutions to automate repetitive development tasks, saving the team 10 hours per week on average.
+        \item Fine-tuned the custom LLMs for the company's e-learning platform, and interfaced with the OpenAI, GCP APIs to improve the preformance of the models.
+    \end{highlights}
+\end{onecolentry}
+
 \section{Projects}
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\href{https://github.com/elweday1/scribble}{\underline{\textbf{Scribble}}}}{}
+\textbf{\href{https://github.com/elweday1/scribble}{Scribble: Collaborative Drawing Game}}
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Engineered a real-time multiplayer drawing and guessing game using Next.js, React, and WebSockets.
+        \item Leveraged YJS for synchronizing the drawing state between peers providing a conflict-free real-time collaboration, enabling seamless drawing experiences across devices.
+        \item Implemented a custom state machine to manage game logic, ensuring smooth and efficient gameplay.
 
-\resumeItemListStart
-\resumeItem{Engineered a real-time multiplayer drawing and guessing game using Next.js, React, and WebSockets.}
-\resumeItem{Leveraged YJS for synchronizing the drawing state between peers providing a conflict-free real-time collaboration, enabling seamless drawing experiences across devices.}
-\resumeItem{Implemented a custom state machine to manage game logic, ensuring smooth and efficient gameplay.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\href{https://github.com/elweday1/CollegeSite}{\underline{\textbf{College Management System}}}}{}
-\resumeItemListStart
-\resumeItem{Architected a comprehensive academic portal using SvelteKit and PostgreSQL, providing a robust platform for educators and students.}
-\resumeItem{Designed an intuitive UI for course registration, grade tracking, and timetable management.}
-\resumeItem{Integrated data visualization tools, providing insightful analytics on student performance and course popularity.}
-\resumeItem{Developed and maintained a comprehensive backend API, ensuring seamless integration with the frontend.}
-\resumeItemListEnd
-
-\section{Extracurricular Activities}
-\resumeSubHeadingListStart
-\resumeSubheading{Energia Powered }{Cairo, EG}{Head of Data Science Committee}{Nov 2022 -- Oct 2023}
-\resumeItemListStart
-\resumeItem{Led a team of 4 to develop and deliver a comprehensive data science curriculum, training over 40 students.}
-\resumeItem{Organized and facilitated 15+ workshops covering advanced topics in Data Science, Machine Learning and Deep Learning.}
-\resumeItem{Mentored 20+ students in capstone projects, with 3 projects selected for presentation at a national tech conference.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+    \end{highlights}
+\end{onecolentry}
 
 
-%-------------------------------------------
-\end{document}
+\vspace{0.2 cm}
+
+\textbf{\href{https://github.com/elweday1/CollegeSite}{College Management System}}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Architected a comprehensive academic portal using SvelteKit and PostgreSQL, providing a robust platform for educators and students.
+        \item Designed an intuitive UI for course registration, grade tracking, and timetable management.
+        \item Integrated data visualization tools, providing insightful analytics on student performance and course popularity.
+        \item Developed and maintained a comprehensive backend API, ensuring seamless integration with the frontend.
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Skills}
+
+
+\textbf{Languages}{: JavaScript, TypeScript, Python, Go, C, C++, Java} \\ \vspace{0.2 cm}
+\textbf{Web}{:  HTML, CSS, React, Node.js, Express, Next.js, Django, Flask, Svelte.} \\ \vspace{0.2 cm}
+\textbf{Cloud \& DevOps}{: Docker, CI/CD, GCP(iAM, Vertex, Run, Functions, Compute, Storage, Firestore).} \\ \vspace{0.2 cm}
+\textbf{Data \& APIs}{: SQL, MongoDB, NoSQL, ORMs, Database, REST, gRPC, GraphQL, Websockets.} \\ \vspace{0.2 cm}
+\textbf{Other}{: Git, Github, Linux, Docker, CI/CD, Design Patterns, Web Scraping, Testing, Scripting, Microservices} \\ \vspace{0.2 cm}
+
