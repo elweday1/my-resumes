@@ -18,10 +18,9 @@ jobs:
             resumes/main.tex
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: resumes/main.pdf
-          name: resume.pdf
 
   upload:
     runs-on: ubuntu-latest
@@ -29,14 +28,13 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: resume.pdf
+        uses: actions/download-artifact@v4
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.CREDS }}
-          filename: "resume.pdf"
+          filename: "artifact"
+          name: "Mohammed_Nasser_SWE_Resume.pdf"
           folderId: ${{ secrets.FOLDER_ID }}
           overwrite: "true"
