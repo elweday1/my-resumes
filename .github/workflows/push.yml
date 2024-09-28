@@ -2,6 +2,12 @@
 # Requires: GCP Service Account to have write access to the folder
 name: Main
 on: [push]
+env: 
+  CREDS: ${{ secrets.CREDS }}
+  FOLDER_ID: ${{ secrets.FOLDER_ID }}
+  MY_NAME: Mohammed_Nasser
+  MY_ROLE: SWE
+  RESUME_FILE_NAME: ${{ vars.MY_NAME }}_${{ vars.MY_ROLE }}_Resume.pdf
 
 jobs:
   build:
@@ -14,13 +20,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            resumes/main.tex
+          root_file: resumes/main.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: main.pdf
+          name: main.pdf
 
   upload:
     runs-on: ubuntu-latest
@@ -29,12 +35,15 @@ jobs:
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
+        with: 
+          name: main.pdf
+          path: main.pdf
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: ${{ secrets.CREDS }}
-          filename: "artifact"
-          name: "Mohammed_Nasser_SWE_Resume.pdf"
-          folderId: ${{ secrets.FOLDER_ID }}
+          filename: main.pdf
           overwrite: "true"
+          credentials: ${{ env.CREDS }}
+          name: ${{ env.RESUME_FILE_NAME }}
+          folderId: ${{ env.FOLDER_ID }}
