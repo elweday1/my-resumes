@@ -16,7 +16,6 @@ jobs:
         with:
           root_file: |
             resumes/main.tex
-            resumes/SWE.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
