@@ -32,7 +32,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: resume
-          path: .
+          path: resumes/main.pdf
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
