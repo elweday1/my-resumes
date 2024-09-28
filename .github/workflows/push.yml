@@ -14,7 +14,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resumes/main.tex
+          root_file: |
+            resumes/main.tex
+            resumes/SWE.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
