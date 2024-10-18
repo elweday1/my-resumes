@@ -7,7 +7,6 @@ env:
   FOLDER_ID: ${{ secrets.FOLDER_ID }}
   MY_NAME: Mohammed_Nasser
   MY_ROLE: SWE
-  RESUME_FILE_NAME: ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf
 
 jobs:
   build:
@@ -46,5 +45,5 @@ jobs:
           filename: main.pdf
           overwrite: true
           credentials: ${{ env.CREDS }}
-          name: ${{ env.RESUME_FILE_NAME }}
+          name: ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf
           folderId: ${{ env.FOLDER_ID }}
