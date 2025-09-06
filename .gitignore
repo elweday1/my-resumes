@@ -1,5 +1,6 @@
 resumes/**
 !resumes/*.tex
+!resumes/*.typ
 *.zip
 creds.json
 *.sh 

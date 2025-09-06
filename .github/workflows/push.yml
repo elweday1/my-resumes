@@ -16,15 +16,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: resumes/main.tex
+      - name: install typst
+        run: snap install typst
+
+      - name: typst compile
+        run: typst compile resumes/main.typ
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          filename: main.pdf
+          filename: resumes/main.pdf
           overwrite: true
           credentials: ${{ env.CREDS }}
           name: ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf
