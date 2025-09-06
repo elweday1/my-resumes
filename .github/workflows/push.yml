@@ -24,15 +24,15 @@ jobs:
       - name: Render Resume Versions with Typst
         run: |
           ## Render default resume
-          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.NAME }} --input redacted=false
+          typst compile ${{ env.MAIN_FILE }} ${{ env.NAME }} --input redacted=false
           
           ## Render redacted resume
-          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.NAME_REDACTED }} --input redacted=true
+          typst compile ${{ env.MAIN_FILE }} ${{ env.NAME_REDACTED }} --input redacted=true
         
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          filename: ${{ github.env.OUT_FILES }}
-          credentials: ${{ github.env.CREDS }}
-          folderId: ${{ github.env.FOLDER_ID }}
+          filename: ${{ env.OUT_FILES }}
+          credentials: ${{ env.CREDS }}
+          folderId: ${{ env.FOLDER_ID }}
           overwrite: true
