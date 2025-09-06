@@ -9,6 +9,8 @@ env:
   MY_ROLE: SWE
   MAIN_FILE: resumes/main.typ
   OUT_FILES: resumes/*.pdf
+  NAME: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf
+  NAME_REDACTED: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf
 jobs:
   render-and-upload:
     runs-on: ubuntu-latest
@@ -22,10 +24,10 @@ jobs:
       - name: Render Resume Versions with Typst
         run: |
           ## Render default resume
-          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf --input redacted=false
+          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.NAME }} --input redacted=false
           
           ## Render redacted resume
-          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf --input redacted=true
+          typst compile ${{ github.env.MAIN_FILE }} ${{ github.env.NAME_REDACTED }} --input redacted=true
         
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
