@@ -1,6 +1,5 @@
 #import "@preview/basic-resume:0.2.8": *
 
-
 #let settings = json(bytes(sys.inputs.at("settings", default: "{}")))
 #let redacted = settings.at("redacted", default: "false") == "true"
 #let personal_info(thing) = if redacted { "[REDACTED]" } else { thing }
@@ -8,7 +7,7 @@
 #show: resume.with(
   author: personal_info("Mohammed Nasser"),
   location: personal_info("Zurich, CH"),
-  email: personal_info("mohammednh284@gmail.com"),
+  email: personal_info("mohammednh2864@gmail.com"),
   github: personal_info("github.com/elweday1"),
   linkedin: personal_info("linkedin.com/in/elweday"),
   // phone: phone,
