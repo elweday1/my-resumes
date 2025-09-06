@@ -23,19 +23,19 @@ jobs:
         run: |  
           ## Render default resume
           typst compile \ 
-            ${{ env.MAIN_FILE }} \
-            ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf \
+            ${{ github.env.MAIN_FILE }} \
+            ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf \
             --input settings='{"redacted": "false"}'
           
           ## Render redacted resume
           typst compile \
-           ${{ env.MAIN_FILE }} \
-           ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume_Redacted.pdf \
+           ${{ github.env.MAIN_FILE }} \
+           ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf \
            --input settings='{"redacted": "true"}'
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          filename: ${{ env.OUT_FILES }}
-          credentials: ${{ env.CREDS }}
-          folderId: ${{ env.FOLDER_ID }}
+          filename: ${{ github.env.OUT_FILES }}
+          credentials: ${{ github.env.CREDS }}
+          folderId: ${{ github.env.FOLDER_ID }}
           overwrite: true
