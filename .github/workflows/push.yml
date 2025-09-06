@@ -1,20 +1,16 @@
 # Secrets : CREDS, FOLDER_ID
 # Requires: GCP Service Account to have write access to the folder
-name: Main
+name: Render and Upload Resumes
 on: [push]
 env: 
   CREDS: ${{ secrets.CREDS }}
   FOLDER_ID: ${{ secrets.FOLDER_ID }}
   MY_NAME: Mohammed_Nasser
   MY_ROLE: SWE
-  SETTINGS_FILE: resumes/settings.json
   MAIN_FILE: resumes/main.typ
   OUT_FILES: resumes/*.pdf
-  name: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf
-  redacted_name: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf
-
 jobs:
-  build:
+  render-and-upload:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,16 +19,19 @@ jobs:
       - name: Install typst
         run: snap install typst
 
-      - name: Render PDF (No Redaction)
-        run: |
-          echo '{"redacted": false}' > ${{env.SETTINGS_FILE}}
-          typst compile resumes/main.typ ${{env.name}}
-      
-      - name: Render PDF (No Redaction)
-        run: |
-          echo '{"redacted": true}' > ${{env.SETTINGS_FILE}}
-          typst compile resumes/main.typ ${{env.redacted_name}}
-
+      - name: Render
+        run: |  
+          ## Render default resume
+          typst compile \ 
+            ${{ env.MAIN_FILE }} \
+            ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf \
+            --input settings='{"redacted": "false"}'
+          
+          ## Render redacted resume
+          typst compile \
+           ${{ env.MAIN_FILE }} \
+           ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume_Redacted.pdf \
+           --input settings='{"redacted": "true"}'
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:

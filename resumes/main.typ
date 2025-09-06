@@ -1,9 +1,9 @@
 #import "@preview/basic-resume:0.2.8": *
 
-#let Settings = json("settings.json")
-#let personal_info(thing) = if Settings.redacted { "[REDACTED]" } else { thing }
 
-
+#let settings = json(bytes(sys.inputs.at("settings", default: "{}")))
+#let redacted = settings.at("redacted", default: "false") == "true"
+#let personal_info(thing) = if redacted { "[REDACTED]" } else { thing }
 
 #show: resume.with(
   author: personal_info("Mohammed Nasser"),
