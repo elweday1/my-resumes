@@ -1,6 +1,7 @@
 resumes/**
 !resumes/*.tex
 !resumes/*.typ
+!resumes/settings.json
 *.zip
 creds.json
 *.sh 

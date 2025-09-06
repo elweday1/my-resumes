@@ -1,20 +1,16 @@
 #import "@preview/basic-resume:0.2.8": *
 
-// Personal information from your LaTeX resume
-#let name = "Mohammed Nasser"
-#let location = "Zurich, CH"
-#let email = "mohammednh284@gmail.com"
-#let github = "github.com/elweday1"
-#let linkedin = "linkedin.com/in/elweday"
-// #let phone = "+1 (xxx) xxx-xxxx"
-// #let personal-site = "stuxf.dev"
+#let Settings = json("settings.json")
+#let personal_info(thing) = if Settings.redacted { "[REDACTED]" } else { thing }
+
+
 
 #show: resume.with(
-  author: name,
-  location: location,
-  email: email,
-  github: github,
-  linkedin: linkedin,
+  author: personal_info("Mohammed Nasser"),
+  location: personal_info("Zurich, CH"),
+  email: personal_info("mohammednh284@gmail.com"),
+  github: personal_info("github.com/elweday1"),
+  linkedin: personal_info("linkedin.com/in/elweday"),
   // phone: phone,
   // personal-site: personal-site,
   accent-color: "#26428b",
@@ -27,7 +23,7 @@
 == Education
 
 #edu(
-  institution: "Helwan University",
+  institution: personal_info("Helwan University"),
   dates: dates-helper(start-date: "Oct 2021", end-date: "June 2026"),
   degree: "B.S. in Computer Engineering",
 )
@@ -70,7 +66,7 @@
 
 #project(
   name: "Scribble: Collaborative Drawing Game",
-  url: "github.com/elweday1/scribble",
+  url: personal_info("github.com/elweday1/scribble"),
 )
 - Engineered a real-time multiplayer drawing and guessing game using Next.js, React, and WebSockets.
 - Leveraged YJS for synchronizing the drawing state between peers providing a conflict-free real-time collaboration, enabling seamless drawing experiences across devices.

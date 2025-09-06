@@ -7,24 +7,36 @@ env:
   FOLDER_ID: ${{ secrets.FOLDER_ID }}
   MY_NAME: Mohammed_Nasser
   MY_ROLE: SWE
+  SETTINGS_FILE: resumes/settings.json
+  MAIN_FILE: resumes/main.typ
+  OUT_FILES: resumes/*.pdf
+  name: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf
+  redacted_name: ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - uses: lvignoli/typst-action@main
-        with:
-          source_file: resumes/main.typ
+      - name: Install typst
+        run: snap install typst
+
+      - name: Render PDF (No Redaction)
+        run: |
+          echo '{"redacted": false}' > ${{env.SETTINGS_FILE}}
+          typst compile resumes/main.typ ${{env.name}}
+      
+      - name: Render PDF (No Redaction)
+        run: |
+          echo '{"redacted": true}' > ${{env.SETTINGS_FILE}}
+          typst compile resumes/main.typ ${{env.redacted_name}}
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          filename: resumes/main.pdf
-          overwrite: true
+          filename: ${{ env.OUT_FILES }}
           credentials: ${{ env.CREDS }}
-          name: ${{ env.MY_NAME }}_${{ env.MY_ROLE }}_Resume.pdf
           folderId: ${{ env.FOLDER_ID }}
+          overwrite: true
