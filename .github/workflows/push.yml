@@ -28,6 +28,8 @@ jobs:
           
           ## Render redacted resume
           typst compile $MAIN_FILE ${OUTPUT}_Redacted.pdf --input redacted=true
+
+          
         
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
