@@ -1,6 +1,6 @@
 #import "@preview/basic-resume:0.2.8": *
 
-#let redacted = sys.inputs.at("redacted", default: "false") == true
+#let redacted = sys.inputs.at("redacted", default: "false") == "true"
 #let personal_info(thing) = if redacted { "[REDACTED]" } else { thing }
 
 #show: resume.with(
