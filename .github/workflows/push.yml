@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install typst
-        run: snap install typst
+        run: sudo snap install typst
 
       - name: Render
         run: |  
