@@ -16,11 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: install typst
-        run: snap install typst
-
-      - name: typst compile
-        run: typst compile resumes/main.typ
+      - uses: lvignoli/typst-action@main
+        with:
+          source_file: resumes/main.typ
 
       - name: Upload to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
