@@ -23,13 +23,13 @@ jobs:
         run: |  
           ## Render default resume
           typst compile \ 
-            ${{ github.env.MAIN_FILE }} \
+            resumes/main.typ \
             ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume.pdf \
             --input redacted=false
           
           ## Render redacted resume
           typst compile \
-           ${{ github.env.MAIN_FILE }} \
+           resumes/main.typ \
            ${{ github.env.MY_NAME }}_${{ github.env.MY_ROLE }}_Resume_Redacted.pdf \
            --input redacted=true
         
