@@ -4,4 +4,4 @@ resumes/**
 !resumes/settings.json
 *.zip
 creds.json
-*.sh 
+*.sh

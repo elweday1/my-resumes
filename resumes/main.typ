@@ -9,8 +9,6 @@
   email: personal_info("mohammednh2864@gmail.com"),
   github: personal_info("https://github.com/elweday1"),
   linkedin: personal_info("https://linkedin.com/in/elweday"),
-  // phone: phone,
-  // personal-site: personal-site,
   accent-color: "#26428b",
   font: "New Computer Modern",
   paper: "us-letter",
@@ -22,28 +20,26 @@
 
 #edu(
   institution: personal_info("Helwan University"),
-  dates: dates-helper(start-date: "Oct 2021", end-date: "June 2026"),
+  dates: "June 2026",
   degree: "B.S. in Computer Engineering",
 )
-- *Coursework*: Operating Systems, Object Oriented Programming, Data Structures and Algorithms, Databases, Computer Architecture, Microprocessors & Microcontrollers
 
 == Work Experience
 
 #work(
   title: "Software Engineer Intern",
   location: "Zurich, Switzerland",
-  company: "Google Deepmind",
-  dates: dates-helper(start-date: "Jun 2025", end-date: "Sep 2025"),
+  company: "Google Deepmind (Gemini)",
+  dates: "Jun 2025 - Sep 2025",
 )
-- Engineered components for an internal Gemini tool, integrating Google AI infrastructure to facilitate and automate agent-based software engineering tasks.
-- Shipped key features and enhanced testing infrastructure for the Gemini Web App, improving application reliability for millions of users.
-- Integrated generative AI models into developer tools to directly enhance productivity and streamline internal engineering workflows.
-
+- Developed agentic workflows and built a novel internal productivity platform on an advanced agent orchestration engine with the Gemini team.
+- Engineered a unified knowledge retrieval system using Angular, Kotlin, and Google RPC services to facilitate cross-organizational data access and provide contextual grounding for language models.
+- Shipped critical features, resolved production bugs, and enhanced the testing infrastructure for the Gemini Web App, directly improving application reliability for millions of users.
 #work(
   title: "Software Engineer CO-OP",
   location: "Cairo, EG (Hybrid)",
   company: "Siemens",
-  dates: dates-helper(start-date: "Aug 2024", end-date: "May 2025"),
+  dates: "Aug 2024 - May 2025",
 )
 - Owned the end-to-end delivery of multiple full-stack features for QuestaOne, a next-generation hardware IDE, from design through implementation and testing.
 - Engineered a performant tree-view component to parse and manage large-scale design templates from the filesystem, directly improving the speed and usability of the designer workflow.
@@ -53,7 +49,7 @@
   title: "Software Engineer",
   location: "London, UK (Remote)",
   company: "Studyo",
-  dates: dates-helper(start-date: "Nov 2023", end-date: "Aug 2024"),
+  dates: "Nov 2023 - Aug 2024",
 )
 - Orchestrated the development of backend video processing containerized microservices on Google Cloud Platform using Go and Python to serve as a backend for mobile applications and internal services.
 - Integrated CI/CD pipelines with GitHub Actions and Docker, cutting deployment times by 50% and significantly reducing integration errors.
@@ -73,5 +69,6 @@
 - *Languages*: JavaScript, TypeScript, Python, Go, C, C++, Java, Kotlin
 - *Web*: React, Angular, Node.js, Nest.js, Next.js, Django, Flask, FastAPI
 - *Cloud & DevOps*: Docker, CI/CD, GCP, AWS, Github Actions
-- *Data & APIs*: SQL, MongoDB, NoSQL, ORMs, DBMS, REST, gRPC, GraphQL, WebSockets, Event-Driven
-- *Other*: Generative AI, Agentic Workflows, Git, Github, Linux, Microservices, Design Patterns, Web Scraping, Scripting, Testing (Unit, Integration, UI)
+- *Data & APIs*: SQL (PostgreSQL, MySQL), MongoDB, Prisma, SQLAlchemy, REST APIs, gRPC, GraphQL, WebSockets
+- *Tools*: Git, Linux, Web Scraping (Scrapy, Selenium)
+- *Testing*: Unit, Integration, UI (Jest, PyTest)
