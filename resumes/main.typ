@@ -48,9 +48,9 @@
 - Developed and documented CLI tools and modular solutions to automate repetitive development tasks, saving the team an average of 10 hours per week.
 
 == Projects
-- Dossier: fast command bar app cross platform built with Rust, with extensive plugin system, run llms, emoji picker, file indexed search and more.
+- Dossier: a high-performance cross-platform command bar in Rust. Designed and implemented a modular plugin architecture, enabling seamless integration of LLMs, file indexing, and custom user workflows."
 - Wordoodle: A collaborative real-time multiplayer drawing and word guessing game using a custom state machine built on top of YJS for state synchronization across devices.
-- RXIV: A lightweight UI framework leveraging RxJS for fine-grained, VDOM-less jsx-based reactivity and declarative state management.
+- RXIV: A novel VDOM-less JSX UI framework from the ground up to optimize rendering performance. Designed its core declarative state management and fine-grained reactivity system using RxJS, completely eliminating virtual DOM overhead.
 
 == Education
 
