@@ -62,7 +62,9 @@
 - Graduation Project: Virtual Laboratory Learning Management System to connect physical labs to user accessible AI assisted UIs.
 
 == Skills
-- *Languages*: JavaScript, TypeScript, Python, Go, C, C++, Java, Kotlin
-- *Web*: React, Angular, Node.js, Next.js, Flask, FastAPI
-- *Cloud & DevOps*: Docker, CI/CD, GCP, AWS, Github Actions
-- *Data & APIs*: SQL, NoSQL, REST, API, gRPC, GraphQL, WebSockets, Web Scraping
+- *Languages*: TypeScript, Python, Go, Rust, C++, JavaScript, Kotlin, Java, C
+- *AI & Machine Learning*: Agentic Workflows, LLM Integration, RAG, Agent Orchestration, Information Retrieval, Contextual Grounding
+- *Frontend & Web*: React, Angular, Next.js, RxJS, YJS, WebSockets, Real-Time State Management, UI Optimization
+- *Backend & Systems*: Microservice Architecture, System Design, gRPC, Node.js, FastAPI, Flask, REST APIs, Distributed Systems, Video Processing
+- *Tools And Platforms*: GCP, AWS, Docker, CI/CD, GitHub Actions, Git, Bash, Automation, Production Support, TDD
+- *Data & APIs*: SQL, NoSQL, REST, API, GraphQL
