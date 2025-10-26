@@ -19,7 +19,7 @@
 == Work Experience
 
 #work(
-  title: "Software Engineer Intern",
+  title: "Intern Software Engineer",
   location: "Zurich, Switzerland",
   company: "Google Deepmind",
   dates: "Jun 2025 - Sep 2025",
@@ -28,7 +28,7 @@
 - Engineered a unified knowledge retrieval system using Angular, Kotlin, and Google RPC services to facilitate cross-organizational data access and provide contextual grounding for language models.
 - Shipped critical features, resolved production bugs, and enhanced the testing infrastructure for the Gemini Web App, directly improving application reliability for millions of users.
 #work(
-  title: "Software Engineer CO-OP",
+  title: "Intern Software Engineer",
   location: "Cairo, EG (Hybrid)",
   company: "Siemens",
   dates: "Aug 2024 - May 2025",
@@ -38,7 +38,7 @@
 - Designed and implemented foundational gRPC services with TypeScript/C++ clients to integrate the C++ backend with the web frontend, enabling real-time communication.
 
 #work(
-  title: "Software Engineer",
+  title: "Software Engineer (Contract)",
   location: "London, UK (Remote)",
   company: "Studyo",
   dates: "Nov 2023 - Aug 2024",
