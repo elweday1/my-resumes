@@ -30,10 +30,10 @@
 #work(
   title: "Software Engineer Intern",
   location: "Zurich, Switzerland",
-  company: "Google Deepmind (Gemini)",
+  company: "Google Deepmind",
   dates: "Jun 2025 - Sep 2025",
 )
-- Developed agentic workflows and built a novel internal productivity platform on an advanced agent orchestration engine with the Gemini team.
+- Developed agentic workflows and built a novel internal productivity platform on an advanced agent orchestration engine with the Gemini Collaborator team.
 - Engineered a unified knowledge retrieval system using Angular, Kotlin, and Google RPC services to facilitate cross-organizational data access and provide contextual grounding for language models.
 - Shipped critical features, resolved production bugs, and enhanced the testing infrastructure for the Gemini Web App, directly improving application reliability for millions of users.
 #work(
