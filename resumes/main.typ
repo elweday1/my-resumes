@@ -5,7 +5,7 @@
 
 #show: resume.with(
   author: personal_info("Mohammed Nasser"),
-  location: personal_info("Zurich, CH"),
+  location: personal_info("Cairo, EG"),
   email: personal_info("mohammednh2864@gmail.com"),
   github: personal_info("https://github.com/elweday1"),
   linkedin: personal_info("https://linkedin.com/in/elweday"),
@@ -23,6 +23,7 @@
   dates: "June 2026",
   degree: "B.S. in Computer Engineering",
 )
+- Graduation Project: Virtual Laboratory Learning Management System to connect physical labs to user accessible AI assisted UIs.
 
 == Work Experience
 
@@ -56,16 +57,11 @@
 - Developed and documented CLI tools and modular solutions to automate repetitive development tasks, saving the team an average of 10 hours per week.
 
 == Projects
+- Dossier: fast command bar app cross platform built with Rust, with extensive plugin system, run llms, emoji picker, file indexed search and more.
+- Wordoodle: A collaborative real-time multiplayer drawing and word guessing game using a custom state machine built on top of YJS for state synchronization across devices.
+- RXIV: A lightweight UI framework leveraging RxJS for fine-grained, VDOM-less jsx-based reactivity and declarative state management.
 
-#project(
-  name: "Scribble: Collaborative Drawing Game",
-  url: personal_info("https://github.com/elweday1/scribble"),
-)
-- Engineered a real-time multiplayer drawing and guessing game using Next.js, React, and WebSockets.
-- Leveraged YJS for conflict-free state synchronization between peers, enabling a seamless and responsive collaborative drawing experience across devices.
-- Implemented a custom state machine to manage complex game logic, ensuring smooth and efficient gameplay.
-
-== Skills
+  == Skills
 - *Languages*: JavaScript, TypeScript, Python, Go, C, C++, Java, Kotlin
 - *Web*: React, Angular, Node.js, Nest.js, Next.js, Django, Flask, FastAPI
 - *Cloud & DevOps*: Docker, CI/CD, GCP, AWS, Github Actions
