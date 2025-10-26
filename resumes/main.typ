@@ -42,8 +42,8 @@
   company: "Siemens",
   dates: "Aug 2024 - May 2025",
 )
-- Owned the end-to-end delivery of multiple full-stack features for QuestaOne, a next-generation hardware IDE, from design through implementation and testing.
-- Engineered a performant tree-view component to parse and manage large-scale design templates from the filesystem, directly improving the speed and usability of the designer workflow.
+- Owned the end-to-end delivery of multiple full-stack features for QuestaOne, a hardware IDE built on top of the Theia framework, from design through implementation and testing.
+- Engineered a performant tree-view component to parse and manage large-scale RTL design templates from the filesystem, directly improving the speed and usability of the designer workflow.
 - Designed and implemented foundational gRPC services with TypeScript/C++ clients to integrate the C++ backend with the web frontend, enabling real-time communication.
 
 #work(
