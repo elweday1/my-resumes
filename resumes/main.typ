@@ -16,15 +16,6 @@
   personal-info-position: center,
 )
 
-== Education
-
-#edu(
-  institution: personal_info("Helwan University"),
-  dates: "June 2026",
-  degree: "B.S. in Computer Engineering",
-)
-- Graduation Project: Virtual Laboratory Learning Management System to connect physical labs to user accessible AI assisted UIs.
-
 == Work Experience
 
 #work(
@@ -61,7 +52,16 @@
 - Wordoodle: A collaborative real-time multiplayer drawing and word guessing game using a custom state machine built on top of YJS for state synchronization across devices.
 - RXIV: A lightweight UI framework leveraging RxJS for fine-grained, VDOM-less jsx-based reactivity and declarative state management.
 
-  == Skills
+== Education
+
+#edu(
+  institution: personal_info("Helwan University"),
+  dates: "June 2026",
+  degree: "B.S. in Computer Engineering",
+)
+- Graduation Project: Virtual Laboratory Learning Management System to connect physical labs to user accessible AI assisted UIs.
+
+== Skills
 - *Languages*: JavaScript, TypeScript, Python, Go, C, C++, Java, Kotlin
 - *Web*: React, Angular, Node.js, Next.js, Flask, FastAPI
 - *Cloud & DevOps*: Docker, CI/CD, GCP, AWS, Github Actions
