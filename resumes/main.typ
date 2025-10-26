@@ -67,4 +67,3 @@
 - *Frontend & Web*: React, Angular, Next.js, RxJS, YJS, WebSockets, Real-Time State Management, UI Optimization
 - *Backend & Systems*: Microservice Architecture, System Design, gRPC, Node.js, FastAPI, Flask, REST APIs, Distributed Systems, Video Processing
 - *Tools And Platforms*: GCP, AWS, Docker, CI/CD, GitHub Actions, Git, Bash, Automation, Production Support, TDD
-- *Data & APIs*: SQL, NoSQL, REST, API, GraphQL
