@@ -63,8 +63,6 @@
 
   == Skills
 - *Languages*: JavaScript, TypeScript, Python, Go, C, C++, Java, Kotlin
-- *Web*: React, Angular, Node.js, Nest.js, Next.js, Django, Flask, FastAPI
+- *Web*: React, Angular, Node.js, Next.js, Flask, FastAPI
 - *Cloud & DevOps*: Docker, CI/CD, GCP, AWS, Github Actions
-- *Data & APIs*: SQL (PostgreSQL, MySQL), MongoDB, Prisma, SQLAlchemy, REST APIs, gRPC, GraphQL, WebSockets
-- *Tools*: Git, Linux, Web Scraping (Scrapy, Selenium)
-- *Testing*: Unit, Integration, UI (Jest, PyTest)
+- *Data & APIs*: SQL, NoSQL, REST, API, gRPC, GraphQL, WebSockets, Web Scraping
